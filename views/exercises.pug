@@ -1,0 +1,16 @@
+extend layout
+
+block content
+    h2= workout.name
+    table#exerciseTable
+        tr
+            th Exercise name
+            th Description
+            th No. sets
+            th Reps/Time
+        each exercise in workout.exerciseList
+            tr
+                td= exercise.name
+                td= exercise.description
+                td= exercise.sets_n
+                td= exercise.repsOrTime

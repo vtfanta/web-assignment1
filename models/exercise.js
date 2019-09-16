@@ -20,4 +20,6 @@ var exercise = new Schema({
     }
 })
 
+
+
 module.exports = exercise;
