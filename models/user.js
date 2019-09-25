@@ -6,14 +6,16 @@ var User = new Schema( {
     // workout program list
     workoutList: [workoutSchema],
     // username
-    name: {
+    username: {
         type: String,
         required: true
     },
     // password
-    password: {
+    salt: {
         type: String,
-        required: true
+    },
+    hash: {
+        type: String,
     }
 })
 
