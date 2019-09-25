@@ -2,6 +2,9 @@ extends layout
 
 block content
   h1= title
+  if user
+    h2 Welcome #{user.username}!
+
   p
     | Welcome to #{title}. Please visit the 
     a(href="/users") list 
