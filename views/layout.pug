@@ -8,6 +8,7 @@ html
   hr
   footer
     p Copyright &copy; 2019 Group 31
-    br
-    a(href='/login/logout') Logout
+    if user
+      br
+      a(href='/login/logout') Logout
     
