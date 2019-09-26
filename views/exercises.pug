@@ -14,3 +14,9 @@ block content
                 td= exercise.description
                 td= exercise.sets_n
                 td= exercise.repsOrTime
+    form(action='/#{workout._id}/exercises', method='POST')
+        select(name='addedExercise')
+            each exercise in exercises
+                option(value=exercise.name) #{exercise.name}
+        input(type='submit', value='Add')
+
