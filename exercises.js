@@ -96,4 +96,4 @@ var exerciseList = [{
 			numReps: 10
 			}];
 			
-			module.exports = 
+			module.exports = exerciseList;
