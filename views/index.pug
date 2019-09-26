@@ -6,19 +6,23 @@ block content
     h2 Welcome #{user.username}!
 
   p
-    | Welcome to #{title}. Please visit the 
-    a(href="/users") list 
-    | of users.
+    | Welcome to #{title}. 
+    if (user) 
+      p2 Please visit the 
+        a(href="/users") list 
+        | of users.
     br
     br
-    br
-    |
-
-    a(class='button' href="/login") Login
-    |
-    br
-    br
-    |
-    a(class='button', href="/register") Register
+    if (user)
+    else
+      p3  
+        br
+        |
+        a(class='button' href="/login") Login
+        |
+        br
+        br
+        |
+        a(class='button', href="/register") Register
     
 
