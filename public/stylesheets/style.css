@@ -22,14 +22,27 @@ body {
 
 footer{
   color: white;
-  
   text-align: center;
   
-  
 }
-p {
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 30px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+p, p2 {
   color: #fff;
   background-color: rgba(75, 81, 82, 0.849);
+  text-align: center;
   }
 
 html {
