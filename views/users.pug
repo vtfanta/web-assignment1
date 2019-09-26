@@ -9,6 +9,6 @@ block content
             th Workouts
         each user in users
             tr
-                td= user.name
+                td= user.username
                 td.toWorkouts
                     a(href=`/users/${user._id}`) &#128170; 
