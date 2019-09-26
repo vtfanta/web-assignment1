@@ -14,3 +14,10 @@ block content
                 td= workout.exerciseList.length
                 td.toWorkouts
                     a(href=`/users/${user._id}/${workout._id}`) &#128170; 
+
+    p Workout Name:
+        form(action='/user', method='POST')
+            div
+                label(for='workout') workout
+                input(type='text', id='workout', name='workout', required)
+                input(type='submit', value='Add Workout')
