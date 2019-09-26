@@ -4,6 +4,9 @@ const UserModel = require('../models/user');
 const crypto = require('crypto');
 
 router.get('/', (req,res) => {
+    if (req.user) {
+      res.redirect('/');
+    }
     res.render('register');
 })
 

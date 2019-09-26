@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     if (err) {
       console.log(err);
     } else {
-      res.render('users',{users:allUsers});
+      res.render('users',{users:allUsers, user:req.user});
     }
   });
 });
