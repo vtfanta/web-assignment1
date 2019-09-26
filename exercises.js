@@ -85,7 +85,7 @@ var exerciseList = [{
 		    },
 		    {
 			name: 'Pullups',
-			description: '1. Stand facing an exercise bar. 2. Grasp the bar from the top with your arms slightly more than shoulder-width apart. 3. Use your shoulder muscles to pull you up, bringing your head up over the bar.',
+			description: '1. Stand facing an exercise bar. \n2. Grasp the bar from the top with your arms slightly more than shoulder-width apart. \n3. Use your shoulder muscles to pull you up, bringing your head up over the bar.',
 			numSets: 3,
 			numReps: 10
 		    },

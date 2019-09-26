@@ -92,7 +92,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
-app.user('/user', userRouter);
+app.use('/user', userRouter);
 
 
 // catch 404 and forward to error handler

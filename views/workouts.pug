@@ -13,7 +13,7 @@ block content
                 td= workout.name
                 td= workout.exerciseList.length
                 td.toWorkouts
-                    a(href=`/users/${user._id}/${workout._id}`) &#128170; 
+                    a(href=`/user/${workout._id}/exercises`) &#128170; 
 
     p Workout Name:
         form(action='/user', method='POST')
