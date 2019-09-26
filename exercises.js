@@ -1,9 +1,9 @@
 var exerciseList = [{
-    name: "Lunges",
-    description: '1. Start by standing with your feet shoulder-width apart and arms down at your sides. 2. Take a step forward with your right leg and bend your right knee as you do so, stopping when your thigh is parallel to the ground. Ensure that your right knee doesn’t extend past your right foot.3. Push up off your right foot and return to the starting position. Repeat with your left leg. This is one rep.',
-	numSets: 3,
-	numReps: 15
-},
+		name: "Lunges",
+		description: '1. Start by standing with your feet shoulder-width apart and arms down at your sides. 2. Take a step forward with your right leg and bend your right knee as you do so, stopping when your thigh is parallel to the ground. Ensure that your right knee doesn’t extend past your right foot.3. Push up off your right foot and return to the starting position. Repeat with your left leg. This is one rep.',
+		numSets: 3,
+		numReps: 15
+	},
 		    {
 			name: 'Squats',
 			description: '1.Start by standing straight, with your feet slightly wider than shoulder-width apart, and your arms at your sides. 2. Brace your core and, keeping your chest and chin up, push your hips back and bend your knees as if you’re going to sit in a chair. 3. Ensuring your knees don’t bow inward or outward, drop down until your thighs are parallel to the ground, bringing your arms out in front of you in a comfortable position. Pause for one second, then extend your legs and return to the starting position.',
@@ -94,4 +94,6 @@ var exerciseList = [{
 			description: '1. Stand facing an exercise bar. 2. Grasp the bar from underneath with your arms in a tight, slightly closer than shoulder-width grip. 3. Use your biceps to pull you up, bringing your head up over the bar.',
 			numSets: 3,
 			numReps: 10
-		    }];
+			}];
+			
+			module.exports = 

@@ -4,7 +4,12 @@ const passport = require('passport');
 
 router.get('/', (req, res) => {
     res.render('login');
-  })
+})
+
+router.get('/logout', (req, res) => {
+  req.logOut();
+  res.redirect('/');
+})
 
 router.post('/', passport.authenticate('local',{
     successRedirect: '/',
