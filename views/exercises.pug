@@ -2,21 +2,22 @@ extend layout
 
 block content
     h2= workout.name
-    table#exerciseTable
-        tr
-            th Exercise name
-            th Description
-            th No. sets
-            th Reps/Time
-        each exercise in workout.exerciseList
+    if workout.exerciseList
+        table#exerciseTable
             tr
-                td= exercise.name
-                td= exercise.description
-                td= exercise.sets_n
-                td= exercise.repsOrTime
-    form(action='/user/#{workout._id}/exercises', method='POST')
+                th Exercise name
+                th Description
+                th No. sets
+                th Reps/Time
+            each exercise in workout.exerciseList
+                tr
+                    td= exercise.name
+                    td= exercise.description
+                    td= exercise.numSets
+                    td= exercise.numReps
+    form(action=`/user/${workout._id}/exercises`, method='POST')
         select(name='addedExercise')
-            each exercise in exercises
+            each exercise in availableExercises
                 option(value=exercise.name) #{exercise.name}
         input(type='submit', value='Add')
 

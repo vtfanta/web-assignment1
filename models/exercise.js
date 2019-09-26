@@ -2,11 +2,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 var exercise = new Schema({
-    repsOrTime: {
+    numReps: {
         type: Number,
         required: true
     },
-    sets_n: {
+    numSets: {
         type: Number,
         required: true
     },
