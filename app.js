@@ -87,9 +87,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use('/', indexRouter);
+app.use('/', loginRouter);
 app.use('/users', usersRouter);
-app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 
 
