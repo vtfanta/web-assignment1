@@ -7,6 +7,7 @@ h1{
 
 h3{
   color: #fff;
+  
 }
 
 body {
@@ -16,11 +17,14 @@ body {
   font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
   opacity:1.0;
   text-align: left;
+  
 }
 
 footer{
   color: white;
+  
   text-align: center;
+  
   
 }
 p {
@@ -29,9 +33,10 @@ p {
   }
 
 html {
-  background-image: url("https://www.hiltoncolumbus.com/assets/img/masthead/fitness2.jpg");
+  background:url("https://i.imgur.com/oducEHS.jpg");
   background-size:cover;
   background-repeat: no-repeat;
+  
 
 }
 
