@@ -19,7 +19,7 @@ body {
 }
 
 footer{
-  color: grey;
+  color: white;
   text-align: center;
   
 }
@@ -76,3 +76,13 @@ table th {
   color: white;
 }
 
+label{
+  color: white;
+  
+  
+}
+
+form{
+  text-align: center;
+
+}
