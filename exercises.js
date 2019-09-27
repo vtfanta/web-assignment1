@@ -48,18 +48,6 @@ var exerciseList = [{
 			numReps: 15
 		    },
 		    {
-			name: 'Standard pushups',
-			description: '1. Start in a plank position with your pelvis tucked in, your neck neutral,  \n \t and your palms directly under your shoulders. Make sure your shoulders are rotated back and down, too. \n2. As you brace your core and keep your back flat, \n \t  begin to lower your body by bending your elbows while keeping them pointed slightly back. \n \t  Lower down until your chest grazes the floor. \n3. Immediately extend your elbows and push your body back up to the starting position.',
-			numSets: 3,
-			numReps: 10
-		    },
-		    {
-			name: 'Modified pushups',
-			description: '1. Start on all fours, keeping a neutral neck. \n2. Walk your hands out until your torso is straight behind you, \n \t  and your body forms a straight line between the shoulders and the knees. \n \t  Make sure your shoulders are rotated back and down, \n \t  and your wrists are stacked directly below your shoulders. Arms should be straight. \n3. Keeping your elbows pointed slightly back,  \n \t bend at your elbows and lower your whole body down until your upper arms are parallel to the ground. \n \t  Keep your core tight during this movement. \n4. Once you reach parallel, push up through your palms, \n \t  extending your elbows and returning to the initial position in step 2.',
-			numSets: 3,
-			numReps: 10
-		    },
-		    {
 			name: 'Wide pushups',
 			description: '1. Start in a plank position but with your hands out wider than your shoulders. \n2. Begin to lower your body by bending your elbows, keeping your core tight and your back flat, \n \t  until your chest grazes the floor. Elbows will flare more than in a standard pushup. \n3. Immediately extend your elbows and push your body back up.',
 			numSets: 3,
@@ -74,12 +62,6 @@ var exerciseList = [{
 		    {
 			name: 'Decline pushups',
 			description: '1. Start in a plank position, with hands stacked under your shoulders.  \n \t Put your feet up onto a bench or box. \n2. Begin lowering your body by bending your elbows, keeping your core tight and your back flat,  \n \t until your chest grazes the floor. Keep your elbows pointed slightly back. \n3. Immediately extend your elbows and push your body back up.',
-			numSets: 3,
-			numReps: 10
-		    },
-		    {
-			name: 'Plyometric pushups',
-			description: '1. Start in a plank position with your pelvis tucked in, your neck neutral,  \n \t and your palms directly under your shoulders. \n2. Begin to lower your body by bending your elbows, keeping them pointed slightly back,  \n \t with your core tight and your back flat, until your chest grazes the floor. \n3. Immediately extend your elbows and push your body back up,  \n \t but instead of stopping at the top, use force to launch your upper body up  \n \t through your hands so your palms come off the ground. \n4. Land lightly back on the ground and lower your chest again for another rep.  \n \t Add a clap at the top for added difficulty.',
 			numSets: 3,
 			numReps: 10
 		    },
