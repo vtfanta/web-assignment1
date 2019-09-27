@@ -17,15 +17,25 @@ router.post('/', (req,res) => {
   });
   User.findByIdAndUpdate(req.user._id, {workoutList: list},{new:true}, (err,updatedUser) => {
     if (err) { console.log(err);}
-    // console.log(updatedUser);
     res.render('workouts', {user:req.user,workouts:updatedUser.workoutList});
   })
+})
+
+// removing a workout
+router.get('/:workout_id', (req,res) => {
+  var workouts = req.user.workoutList;
+  var chosenWorkout = workouts.filter(workout => workout._id == req.params.workout_id)[0];
+  var idx = workouts.indexOf(chosenWorkout);
+  workouts.splice(idx, 1);
+  User.findByIdAndUpdate(req.user._id, {workoutList: workouts},{new:true}, (err,updatedUser) => {
+    if (err) { console.log(err);}
+    res.render('workouts', {user:req.user,workouts:updatedUser.workoutList});
+  });
 })
 
 // view list of exercises for a given workout
 router.get('/:workout_id/exercises', function(req, res, next) {
   var foundWorkout = req.user.workoutList.filter(workout => workout._id == req.params.workout_id)[0];
-  // console.log(foundWorkout.exerciseList);
   res.render('exercises',{user: req.user, workout: foundWorkout, availableExercises: allExercises});
 });
 
@@ -36,7 +46,6 @@ router.post('/:workout_id/exercises', (req,res) => {
   workouts.filter(workout => workout._id == req.params.workout_id)[0].exerciseList.push(chosenExercise);
   User.findByIdAndUpdate(req.user._id, {workoutList: workouts},{new:true}, (err,updatedUser) => {
     if (err) { console.log(err);}
-    // console.log(updatedUser);
     res.render('exercises', {availableExercises: allExercises,user:req.user,workout:updatedUser.workoutList.filter(workout => workout._id == req.params.workout_id)[0]});
   });
   
@@ -44,15 +53,13 @@ router.post('/:workout_id/exercises', (req,res) => {
 
 // delete a specific exercise
 router.get('/:workout_id/:exercise_id', (req, res) => {
-  var chosenExercise = allExercises.filter(exercise => exercise._id == req.body.exercise_id)[0];
-  console.log(chosenExercise);
   var workouts = req.user.workoutList;
-  var idx = workouts.filter(workout => workout._id == req.params.workout_id)[0].exerciseList.indexOf(chosenExercise);
-  console.log(idx);
+  var workout = workouts.filter(workout => workout._id == req.params.workout_id)[0];
+  var chosenExercise = workout.exerciseList.filter(exercise => exercise._id == req.params.exercise_id)[0];
+  var idx = workout.exerciseList.indexOf(chosenExercise);
   workouts.filter(workout => workout._id == req.params.workout_id)[0].exerciseList.splice(idx,1);
   User.findByIdAndUpdate(req.user._id, {workoutList: workouts},{new:true}, (err,updatedUser) => {
     if (err) { console.log(err);}
-    // console.log(updatedUser);
     res.render('exercises', {availableExercises: allExercises,user:req.user,workout:updatedUser.workoutList.filter(workout => workout._id == req.params.workout_id)[0]});
   });
 })

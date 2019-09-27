@@ -5,11 +5,14 @@ block content
     h3 a table of workouts
     table#workoutTable
         tr
+            th Delete
             th Workout name
             th No. exercises
             th Details
         each workout in workouts
             tr
+                td.delete
+                    a(href=`/user/${workout._id}`) ❌
                 td= workout.name
                 td= workout.exerciseList.length
                 td.toWorkouts
