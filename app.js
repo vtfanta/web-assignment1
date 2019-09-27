@@ -63,7 +63,6 @@ process.on('SIGINT', () => {
 });
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
 var registerRouter = require('./routes/register');
 var userRouter = require('./routes/user');
@@ -91,7 +90,6 @@ app.use('/user',ensureLogin.ensureLoggedIn('/login'));
 
 // routers
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/user', userRouter);
