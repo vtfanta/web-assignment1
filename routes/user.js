@@ -21,6 +21,18 @@ router.post('/', (req,res) => {
   })
 })
 
+// removing a workout
+router.get('/:workout_id', (req,res) => {
+  var workouts = req.user.workoutList;
+  var chosenWorkout = workouts.filter(workout => workout._id == req.params.workout_id)[0];
+  var idx = workouts.indexOf(chosenWorkout);
+  workouts.splice(idx, 1);
+  User.findByIdAndUpdate(req.user._id, {workoutList: workouts},{new:true}, (err,updatedUser) => {
+    if (err) { console.log(err);}
+    res.render('workouts', {user:req.user,workouts:updatedUser.workoutList});
+  });
+})
+
 // view list of exercises for a given workout
 router.get('/:workout_id/exercises', function(req, res, next) {
   var foundWorkout = req.user.workoutList.filter(workout => workout._id == req.params.workout_id)[0];
