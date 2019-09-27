@@ -2,7 +2,6 @@ extend layout
 
 block content
     h2 List of workouts for #{user.username}
-    h3 a table of workouts
     table#workoutTable
         tr
             th Delete
@@ -18,9 +17,8 @@ block content
                 td.toWorkouts
                     a(href=`/user/${workout._id}/exercises`) &#128170; 
 
-    p Workout Name:
-        form(action='/user', method='POST')
-            div
-                label(for='workout') workout
-                input(type='text', id='workout', name='workout', required)
-                input(type='submit', value='Add Workout')
+    form(action='/user', method='POST')
+        div
+            label(for='workout') Enter new workout name: 
+            input(type='text', id='workout', name='workout', required)
+            input(type='submit', value='Add Workout')
