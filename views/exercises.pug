@@ -12,7 +12,7 @@ block content
             each exercise in workout.exerciseList
                 tr
                     td= exercise.name
-                    td= exercise.description
+                    td.desc= exercise.description
                     td= exercise.numSets
                     td= exercise.numReps
     form(action=`/user/${workout._id}/exercises`, method='POST')
