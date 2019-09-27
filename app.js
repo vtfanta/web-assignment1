@@ -1,3 +1,6 @@
+// Group 31 fitness website
+// heroku app is running on https://webbuilding-assignment1.herokuapp.com/
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
