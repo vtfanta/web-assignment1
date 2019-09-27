@@ -1,12 +1,12 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-// var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
 const crypto = require('crypto');
+const ensureLogin = require('connect-ensure-login');
 
 var UserModel = require('./models/user');
 
@@ -77,7 +77,6 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: '007',
@@ -87,7 +86,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// secure routes of users
+app.use('/user',ensureLogin.ensureLoggedIn('/login'));
 
+// routers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);

@@ -5,12 +5,15 @@ block content
     if workout.exerciseList
         table#exerciseTable
             tr
+                th Delete
                 th Exercise name
                 th Description
                 th No. sets
                 th Reps/Time
             each exercise in workout.exerciseList
                 tr
+                    td.delete
+                        a(href=`/user/${workout._id}/${exercise._id}`) ❌
                     td= exercise.name
                     td.desc= exercise.description
                     td= exercise.numSets
